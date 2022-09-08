@@ -2,10 +2,9 @@
 
 
 /**
+ * main - main function
  *
- * * main - main function
- *
- * * Return: everytime 0
+ * Return: everytime 0
  *
  * 
  */
