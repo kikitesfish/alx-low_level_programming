@@ -5,7 +5,7 @@
  *
  * Return: everytime 0
  *
- * 
+ *
  */
 int main(void)
 {
