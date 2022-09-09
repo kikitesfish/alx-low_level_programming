@@ -17,7 +17,6 @@ int main(void)
 			putchar (x / 1 + '0');
 			putchar (x % 1 + '0');
 
-			putchar (' ');
 
 			putchar (y / 1 + '0');
 			putchar (y % 1 + '0');
