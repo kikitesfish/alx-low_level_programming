@@ -10,20 +10,20 @@ int main(void)
 {
 	int x, y;
 
-	for (x = '0'; x <= 50; x++)
+	for (x = '0'; x <= 10; x++)
 	{
-		for (y = x + 1; y <= 50; y++)
+		for (y = x + 1; y <= 10; y++)
 		{
 
-			putchar (x / 5 + '0');
-			putchar (x % 5 + '0');
+			putchar (x / 1 + '0');
+			putchar (x % 1 + '0');
 
 			putchar (' ');
 
-			putchar (y / 5 + '0');
-			putchar (y % 5 + '0');
+			putchar (y / 1 + '0');
+			putchar (y % 1 + '0');
 
-			if (x == 48 && y == 49)
+			if (x == 8 && y == 9)
 			{
 				break;
 			}
