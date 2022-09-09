@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - main Entry
+ * main - positive or negative
  *
  * Return: always 0
  */
@@ -29,5 +29,5 @@ int main(void)
 		printf("%i is zero\n", n);
 	}
 
-	return (0)
+	return (0);
 }
