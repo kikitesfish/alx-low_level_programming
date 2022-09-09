@@ -10,7 +10,7 @@ int main(void)
 {
 	char x;
 
-	for (x = 122; x >= 97; x++)
+	for (x = 'z'; x >= 'a'; x++)
 	{
 		putchar(x);
 	}
