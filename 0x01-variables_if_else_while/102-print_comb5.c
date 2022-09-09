@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 
 /**
  * main - numbers
@@ -12,7 +11,7 @@ int main(void)
 
 	for (x = '0'; x <= 100; x++)
 	{
-		for (y = x + 1; y <= 100; y++)
+		for (y = x + 1 ; y <= 100; y++)
 		{
 
 			putchar (x / 10 + '0');
