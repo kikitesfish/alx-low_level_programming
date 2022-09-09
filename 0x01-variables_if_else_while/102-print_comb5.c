@@ -12,7 +12,7 @@ int main(void)
 
 	for (x = '0'; x < 50; x++)
 	{
-		for (y = x + 1; y < 50; y++)
+		for (y = x + 0; y < 50; y++)
 		{
 
 			putchar (x / 5 + '0');
