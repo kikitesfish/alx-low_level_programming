@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - positive or negative
+ * main - main Entry
  *
  * Return: always 0
  */
