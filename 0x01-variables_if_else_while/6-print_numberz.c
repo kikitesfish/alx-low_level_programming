@@ -14,7 +14,7 @@ int main(void)
 		putchar(x + '0');
 	}
 
-	printf("\n")
+	printf("\n");
 
 		return (0);
 }
