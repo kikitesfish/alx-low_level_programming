@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	i;
+	i = 0;
 	j = 1;
 	k = 2;
 
@@ -22,3 +22,4 @@ int main(void)
 	}
 	printf("\n");
 	return (0);
+}
