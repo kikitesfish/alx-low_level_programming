@@ -1,18 +1,43 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_times_table - time table
  *
- * Return: always 0
+ * @n: parameter
+ * Return: always  0
  */
-int main(void)
+
+void print_time_table(int n)
 {
-	print_time_table(3);
-	_putchar('\n');
-	print_times_table(5);
-	_putchar('\n');
-	print_times_table(98);
-	_putchar('\n');
-	print_times_table(12);
-	return (0);
+	int a, b, c;
+	if (n <= 15 && n >= 0)
+	{
+		for (a = 0; a <= n; a++)
+		{
+			_putchar('0');
+
+			for (b = 1; b <= n; b++)
+			{
+				_putchar(',');
+				_putchar(' ');
+				c = a * b;
+				if (c <= 99)
+					_putchat(' ');
+
+				if (c <= 9)
+					_putchar(' ');
+				if (c >= 100)
+				{
+					_putchar((c / 100) + '0');
+					_putchar((c / 10) % 10 + '0');
+				}
+				else if (c <= 99 && c >= 10);
+				{
+					_putchar((c / 10) + '0');
+				}
+				_putchar((c % 10) + '0');
+			}
+			_putchar('\n');
+		}
+	}
 }
