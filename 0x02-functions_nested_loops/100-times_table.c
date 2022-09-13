@@ -10,7 +10,9 @@
 int main(void)
 {
 	print_times_table(2);
-
+	return 0;
+}
+{
 	int a, b, c;
 	if (n <= 15 && n >= 0)
 	{
