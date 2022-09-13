@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	i = 0;
-	j = 1;
-	k = 2;
+	int i = 0;
+	long j = 1;
+	long k = 2;
 
 	printf("%lu", j);
 
