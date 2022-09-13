@@ -9,8 +9,8 @@
 int main(void)
 {
 	unsigned long i;
-	unsigned long j;
-	unsigned long k;
+	unsigned long j = 1;
+	unsigned long k = 2;
 	unsigned long l = 1000000000;
 	unsigned long m;
 	unsigned long m2;
