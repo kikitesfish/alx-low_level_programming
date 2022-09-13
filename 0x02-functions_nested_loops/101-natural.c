@@ -35,6 +35,7 @@ while (a == 0)
 	{
 		a = 1;
 	}
+}
 	printf("%d\n", d);
 	return (0);
 }
