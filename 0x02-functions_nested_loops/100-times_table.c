@@ -22,7 +22,7 @@ void print_time_table(int n)
 				_putchar(' ');
 				c = a * b;
 				if (c <= 99)
-					_putchat(' ');
+					_putchar(' ');
 
 				if (c <= 9)
 					_putchar(' ');
@@ -31,7 +31,7 @@ void print_time_table(int n)
 					_putchar((c / 100) + '0');
 					_putchar((c / 10) % 10 + '0');
 				}
-				else if (c <= 99 && c >= 10);
+				else if (c <= 99 && c >= 10)
 				{
 					_putchar((c / 10) + '0');
 				}
