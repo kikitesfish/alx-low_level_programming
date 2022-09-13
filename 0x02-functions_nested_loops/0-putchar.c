@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-	char str[] = "_putchar\n";
 	_purchar('_');
 	_putchar('p');
 	_putchar('u');
