@@ -2,12 +2,12 @@
 
 /**
  * print_times_table - time table
- *
+ * parameter
  * @n: parameter
  * Return: always  0
  */
 
-void times_table(void);
+void print_times_table(void);
 {
 	int a, b, c;
 	if (n <= 15 && n >= 0)
