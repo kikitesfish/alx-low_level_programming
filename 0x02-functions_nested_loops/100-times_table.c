@@ -7,8 +7,10 @@
  * Return: always  0
  */
 
-void print_times_table(void);
+int main(void)
 {
+	print_times_table(2);
+
 	int a, b, c;
 	if (n <= 15 && n >= 0)
 	{
