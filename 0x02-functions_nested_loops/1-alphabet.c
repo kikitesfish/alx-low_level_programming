@@ -6,13 +6,13 @@
  * Return: always 0
  */
 
-void print_alphaber(void)
+void print_alphabet(void)
 {
-	char alphaber = 'a';
+	char alphabet = 'a';
 
 	for (a = 'a'; a <= 'z'; a++)
 	{
-		_putchar(alphaber);
+		_putchar(alphabet);
 	}
 
 	_putchar('\n);
