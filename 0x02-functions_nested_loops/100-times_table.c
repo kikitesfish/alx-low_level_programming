@@ -4,8 +4,8 @@ int _putchar(char c);
 
 /**
  * print_times_table - print the time table with
- * parameter
- * @n: parameter
+ * 
+ * @n: n times table
  * Return: always  0
  */
 
@@ -30,6 +30,7 @@ void print_times_table(int n)
 					}
 					_putchar((j * i) + '0');
 				}
+
 				else if ((i * j) < 100)
 				{
 					_putchar(' ');
