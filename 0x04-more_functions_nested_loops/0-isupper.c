@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _insupper - evaluet letter
+ * _isupper - evaluet letter
  * @c: print int
- * Return: always o
+ * Return: always 0
  */
 
 int _isupper(int c)
