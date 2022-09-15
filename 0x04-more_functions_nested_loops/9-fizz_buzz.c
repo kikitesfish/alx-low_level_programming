@@ -3,45 +3,37 @@
 /**
  * main - main point
  *
- * Return: void
+ * Return: always 0
  */
 
 int main(void)
 {
+	int i = 1;
 
-	int x = 100;
-	int i;
-
-	i = 1;
-	while (i <= x)
+	while (i < 101)
 	{
-		if (i % 3 == && i % 5 == 0)
+		if (x % 3 == 0 i % 5 == 0)
 		{
-			printf("FizzBuzz");
+			printf("%s", "FizzBuzz");
 		}
-
 		else if (i % 3 == 0)
 		{
-			printf("Fizz");
+			printf("%s", "Fizz");
 		}
-
 		else if (i % 5 == 0)
 		{
-			if (i < x)
-				printf("Buzz");
-
-			else
-				printf("Buzz");
+			printf("%s", "Buzz");
 		}
-
 		else
 		{
-			printf("%i", i);
+			printf("%d", i);
 		}
 
-		i++;
-
+		if ( i != 100)
+		{
+			printf(" ");
+		}
+		printf("\n");
+		return (0);
 	}
-	printf("\n");
-	return (0);
 }
