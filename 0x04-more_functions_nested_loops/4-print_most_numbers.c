@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * print_most_numbers - print numbers
+ * print_most_numbers - print numbers between 0 t0 9
  *
  * Return: always 0
  */
-
 void print_most_numbers(void)
 {
 	int i;
