@@ -1,40 +1,46 @@
 #include <stdio.h>
-
 /**
- * main - fizz buzz
+ * main - main point
  *
  * Return: always 0
  */
 
 int main(void)
 {
-	int i = 1;
 
-	while (i <= 100)
+	int x = 100;
+	int i;
+
+	i = 1;
+	while (i <= x)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (i % 3 == && i % 5 == 0)
 		{
 			printf("FizzBuzz");
 		}
+
 		else if (i % 3 == 0)
 		{
 			printf("Fizz");
 		}
-		else if (i % 5 == 0)
+
+		else if (i % 5 ==0)
 		{
-			printf("Buzz");
+			if (i < x)
+				printf("Buzz");
+
+			else
+				printf("Buzz");
 		}
+
 		else
 		{
 			printf("%i", i);
 		}
-		if (i != 100)
-		{
-			putchar(' ');
-		}
 
-		i++
+		i++;
+
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
