@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
  * main - main point
@@ -10,26 +9,27 @@ int main(void)
 {
 	int i = 1;
 
-	while (i < 101)
+	while (i++ < 100)
 	{
-		if (x % 3 == 0 i % 5 == 0)
+		if ((i % 3 == 0) && (i % 5 == 0))
 		{
-			printf("%s", "FizzBuzz");
+			printf("FizzBuzz ");
 		}
-		else if (i % 3 == 0)
+		else if ((i % 3) == 0)
 		{
-			printf("%s", "Fizz");
+			printf("Fizz ");
 		}
-		else if (i % 5 == 0)
+		else if ((i % 5) == 0)
 		{
-			printf("%s", "Buzz");
+			if (i != 100)
+			{
+			printf("Buzz ");
 		}
 		else
 		{
 			printf("%d", i);
 		}
-
-		if ( i != 100)
+		
 		{
 			printf(" ");
 		}
