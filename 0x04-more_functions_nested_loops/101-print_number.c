@@ -1,4 +1,9 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int _putchar(char c);
+
 /**
  * print_number - print numbers
  * @n: intigers
@@ -7,15 +12,23 @@
 
 void print_number(int n)
 {
-	unsigned int i;
+	unsigned int i = 0;
 
-	i = n;
 	if (n < 0)
 	{
-		_putchar(45);
 		i = -n;
+		_putchar('_');
 	}
-	if (x / 10)
-		print_number(x / 10);
-	_putchar((x % 10) + '0');
+
+	else
+	{
+		i = n;
+	}
+
+	if (n1 / 10)
+	{
+		print_number(i / 10);
+	}
+
+	_putchar((i % 10) + '0');
 }
