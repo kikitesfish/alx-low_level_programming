@@ -2,7 +2,7 @@
 
 /**
  * print_number - print numbers
- * @n: intigers
+ * @n: print number
  * Return: always 0
  */
 
