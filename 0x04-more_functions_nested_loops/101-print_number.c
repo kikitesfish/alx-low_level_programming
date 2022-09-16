@@ -1,8 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-int _putchar(char c);
 
 /**
  * print_number - print numbers
@@ -12,23 +8,30 @@ int _putchar(char c);
 
 void print_number(int n)
 {
-	unsigned int i = 0;
+	int i = 0, x = 1, y = 0;
 
 	if (n < 0)
 	{
-		i = -n;
 		_putchar('_');
+		n = -n;
 	}
 
-	else
+	while (n / x != 0)
 	{
-		i = n;
+		x *= 10;
+		i++;
 	}
+	x = x / 10;
 
-	if (n1 / 10)
+	while (y < i)
 	{
-		print_number(i / 10);
+		_putchar('0' + n / x);
+		n = n - (n / x) * x;
+		x = x / 10;
+		y++;
 	}
 
-	_putchar((i % 10) + '0');
+	if (i == 0)
+		_putchar('0' + n);
+
 }
