@@ -7,7 +7,7 @@
  * @n: type integer
  */
 
-void print_array(int *a, int n)
+void print_array(int *a, int y)
 {
 	short x = 0;
 
