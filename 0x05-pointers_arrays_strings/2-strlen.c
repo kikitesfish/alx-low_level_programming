@@ -12,8 +12,9 @@ int _stlen(char *s)
 	int leng;
 
 	leng = 0;
-	while (s[leng] != '\0')
+	while (*s != '\0')
 	{
+		s++;
 		leng++;
 	}
 	return (leng);
