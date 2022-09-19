@@ -7,14 +7,14 @@
  * @n: type integer
  */
 
-void print_array(int *a, int y)
+void print_array(int *a, int n)
 {
 	short x = 0;
 
-	while (y-- > 0)
+	while (n-- > 0)
 	{
 		printf("%d", a[x++]);
-		if (y != 0)
+		if (n != 0)
 			printf(", ");
 	}
 
