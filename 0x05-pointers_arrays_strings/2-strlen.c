@@ -7,7 +7,7 @@
  * Return: void always
  */
 
-int _stlen(char *s)
+int _strlen(char *s)
 {
 	int leng;
 
