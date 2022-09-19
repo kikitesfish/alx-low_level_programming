@@ -4,15 +4,22 @@
 #include <stdio.h>
 
 /**
- * a program to generate random password
+ * main - a program to generate random password
+ * Return: 0
  */
 
 int main(void)
 {
-	int num;
+	int result;
+	char ch;
 
-	srand(time(0));
-	num = rand();
-	printf("%i\n", num);
+	srand(time(NULL));
+	while (result <= 2645)
+	{
+		ch = rand() % 128;
+		result += ch;
+		putchar(ch);
+	}
+	putchar(2772 - result);
 	return (0);
 }
