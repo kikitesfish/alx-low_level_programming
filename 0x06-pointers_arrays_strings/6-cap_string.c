@@ -8,18 +8,18 @@
  * Retrutn: to the changed string
  */
 
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
 	int x, y;
 	char delimeters[] = " \t\n,;.!?\"(){}";
 
-	for (x = 0; s[x] != '\0'; x++)
+	for (x = 0; str[x] != '\0'; x++)
 	{
-		if (s[0] >= 97 && s[0] <= 122)
-			s[0] = s[0] - 32;
+		if (str[0] >= 97 && str[0] <= 122)
+			str[0] = str[0] - 32;
 		for (y = 0; delimeters[y] != '\0'; y++)
-				if (s[x] == delimeters[y] && s[x + 1] >= 97 && s[x + 1] <= 122)
-					s[x + 1] = s[x + 1] - 32;
+				if (str[x] == delimeters[y] && str[x + 1] >= 97 && str[x + 1] <= 122)
+					str[x + 1] = str[x + 1] - 32;
 	}
-	return (s);
+	return (str);
 }
