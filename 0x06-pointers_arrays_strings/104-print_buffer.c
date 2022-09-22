@@ -19,7 +19,7 @@ void print_buffer(char *b, int size)
 		for (ind = 0; ind < 10; ind++)
 		{
 			if ((ind + by) >= size)
-				rintf("  ");
+				printf("  ");
 			else
 				printf("%02x", *(b + ind + by));
 			if ((ind % 2) != 0 && ind != 0)
