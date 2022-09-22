@@ -10,7 +10,7 @@ char *leet(char *str)
 {
 	int x;
 	int y;
-	char leet[] = "ol_ea__t";
+	char leet[] = "OL_EA__T";
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
