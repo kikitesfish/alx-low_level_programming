@@ -1,25 +1,38 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * cap_string - capitalize words
- * @s: input sting
+ * cap_string - capitallize all words
+ * @str: input string
  *
- * Retrutn: to the changed string
+ * Return: to the changed string
  */
-
 char *cap_string(char *str)
 {
-	int x, y;
-	char delimeters[] = " \t\n,;.!?\"(){}";
+	int index = 0;
 
-	for (x = 0; str[x] != '\0'; x++)
+	while (str[index])
 	{
-		if (str[0] >= 97 && str[0] <= 122)
-			str[0] = str[0] - 32;
-		for (y = 0; delimeters[y] != '\0'; y++)
-				if (str[x] == delimeters[y] && str[x + 1] >= 97 && str[x + 1] <= 122)
-					str[x + 1] = str[x + 1] - 32;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}' ||
+				index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
+
 	return (str);
 }
