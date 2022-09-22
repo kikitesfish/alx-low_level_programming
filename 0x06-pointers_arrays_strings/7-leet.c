@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * leet - encode
@@ -16,8 +15,7 @@ char *leet(char *str)
 	{
 		for (i2 = 0; i2 <= 7; i2++)
 		{
-			if (str[i1] == leet[i2] ||
-					str[i1] - 32 == leet[i2])
+			if (str[i1] == leet[i2] || str[i1] - 32 == leet[i2])
 				str[i1] = i2 + '0';
 		}
 
