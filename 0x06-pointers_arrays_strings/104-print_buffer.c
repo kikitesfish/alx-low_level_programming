@@ -29,8 +29,7 @@ void print_buffer(char *b, int size)
 		{
 			if ((ind + by) >= size)
 				break;
-			else if (*(b + ind + by) >= 31 &&
-					*(b + ind + by) <= 126)
+			else if (*(b + ind + by) >= 31 && *(b + ind + by) <= 126)
 				printf("%c", *(b + ind + by));
 			else
 				printf(".");
@@ -38,14 +37,7 @@ void print_buffer(char *b, int size)
 		if (by >= size)
 			continue;
 		printf("\n");
-
-		if (size <= 0)
-			printf("\n");
-		return (r + r_ind);
 	}
-
-	else if (tens && r_ind < 0)
-		return (0);
-
-	return (r + r_ind + 1);
+	if (size <= 0)
+			printf("\n");
 }
