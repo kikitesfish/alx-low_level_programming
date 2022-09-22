@@ -6,25 +6,25 @@
  *
  * Return: to the string
  */
-char *rot13(char *s)
+char *rot13(char *str)
 {
 	int count = 0, i;
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (*(s + count) != '\0')
+	while (*(str + count) != '\0')
 	{
 
 		for (i = 0; i < 52; i++)
 		{
-			if (*(s + count) == alphabet [i])
+			if (*(str + count) == alphabet [i])
 			{
-				*(s + count) = rot13[i];
+				*(str + count) = rot13[i];
 				break;
 			}
 		}
 		count++;
 	}
 
-	return (s);
+	return (str);
 }
