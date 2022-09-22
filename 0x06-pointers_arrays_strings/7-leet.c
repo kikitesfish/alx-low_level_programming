@@ -10,13 +10,13 @@ char *leet(char *str)
 {
 	int x;
 	int y;
-	char l[] = "ol_ea__t";
+	char leet[] = "ol_ea__t";
 
 	for (x = 0; str[x] != '\0'; x++)
 	{
-		for (y = 0; l[y] != '\0'; y++)
+		for (y = 0; leet[y] != '\0'; y++)
 		{
-			if (str[x] == l[y] || str[x] == (l[y] - 32))
+			if (str[x] == leet[y] || str[x] == (leet[y] - 32))
 			{
 				str[x] = y + '0';
 			}
