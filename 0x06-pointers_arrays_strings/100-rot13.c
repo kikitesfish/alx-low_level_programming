@@ -6,25 +6,25 @@
  *
  * Return: to the string
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	int i1 = 0, i2;
-	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'};
-	
-	while (str[i1])
+	int count = 0, i;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	while (*(s + count) != '\0')
 	{
-		for (i2 = 0; i2 < 52; i2++)
+
+		for (i = 0; i < 52; i++)
 		{
-			if (str[i1] == alphabet[i2])
+			if (*(s + count) == alphabet [i])
 			{
-				str[i1] = rot13key[i2];
+				*(s + count) = rot13[i];
 				break;
 			}
 		}
-
-		i1++;
-
+		count++;
 	}
-	return (str);
+
+	return (s);
 }
