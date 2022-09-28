@@ -1,17 +1,17 @@
 #include "main.h"
 
-int sqrt(int i, int r);
+int natural_square(int i, int r);
 int _sqrt_recursion(int n);
 
 /**
- * sqrt - natural square root of input number
+ * natural_square - natural square root of input number
  * @i: intiget to the root
  * @r: the root
  *
  * Return: the square root
  */
 
-int sqrt(int i, int r)
+int natural_square(int i, int r)
 {
 	if ((r * r) == i)
 		return (r);
@@ -19,7 +19,7 @@ int sqrt(int i, int r)
 	if (r == i / 2)
 		return (-1);
 
-	return (sqrt(i, r + 1));
+	return (natural_square(i, r + 1));
 }
 
 /**
@@ -38,5 +38,5 @@ int _sqrt_recursion(int n)
 
 	if (n == 1)
 		return (1);
-	return (sqrt(n, r));
+	return (natural_square(n, r));
 }
