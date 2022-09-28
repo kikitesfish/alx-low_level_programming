@@ -53,11 +53,7 @@ int string_palindrome(char *s, int l, int i)
 
 int is_palindrome(char *s)
 {
-	int i = 0;
 	int l = length_string(s);
-
-	if (!(*s))
-		return (1);
-
-	return (string_palindrome(s, l, i));
+	
+	return (string_palindrome(s, l - 1));
 }
