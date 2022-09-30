@@ -1,49 +1,9 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <stdbool.h>
 
 /**
- * coin_conv - coin converter
- * @i: intiger
- *
- * Return: the number of coins
- */
-
-int coin_conv(int i)
-{
-	int count = 0;
-
-	while (i != 0)
-	{
-		if (i % 10 == 9 || i % 10 == 7)
-			i -= 2;
-		else if (i % 25 == 0)
-			i -= 25;
-		else if (i % 10 == 0)
-			i -= 10;
-		else if (i % 5 == 0)
-			i -= 5;
-		else if (i % 2 == 0)
-		{
-			if (i % 10 == 6)
-				i -= 1;
-			else
-				i -= 2;
-		}
-		else
-			i -= 1;
-
-		count++;
-	}
-
-	return (count);
-}
-
-/**
- * main - the minimum number of coins to make change for an amount of money
- * @argc: number argument
+ * main -  minimum number of coins to make change for an amount of money
+ * @argc: number of argumen
  * @argv: arguments
  *
  * Return: 0 or 1
@@ -51,9 +11,8 @@ int coin_conv(int i)
 
 int main(int argc, char *argv[])
 {
-	int i, coin;
-
-	coin = 0;
+	int i;
+	int coins = 0;
 
 	if (argc != 2)
 	{
@@ -62,16 +21,32 @@ int main(int argc, char *argv[])
 	}
 
 	i = atoi(argv[1]);
-
-	if (i < 0)
-		printf("0\n");
-
-	else
+	while (i > 0)
 	{
-		coin = coin_conv(i);
-
-		printf("%d\n", coin);
+		coins++;
+		if ((i - 25) >= 0)
+		{
+			i -= 25;
+			continue;
+		}
+		if ((i - 10) >= 0)
+		{
+			i -= 10;
+			continue;
+		}
+		if ((i - 5) >= 0)
+		{
+			i -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
+		{
+			i -= 2;
+			continue;
+		}
+		i--;
 	}
+	printf("%d\n", coins);
 
 	return (0);
 }
