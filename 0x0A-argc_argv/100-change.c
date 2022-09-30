@@ -35,7 +35,7 @@ int coin_conv(int i)
 		else
 			i -= 1;
 
-		count ++;
+		count++;
 	}
 
 	return (count);
