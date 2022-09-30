@@ -30,15 +30,15 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	while (c[a] != '\0')
+	while (coins[a] != '\0')
 
 	{
-		if (b >= c[a])
+		if (b >= coins[a])
 
 	{
-		aux = (b / c[a]);
+		aux = (b / coins[a]);
 		c += d;
-		b -= c[a] * aux;
+		b -= coins[a] * aux;
 	}
 
 	a++;
