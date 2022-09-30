@@ -1,18 +1,18 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - multiplies two numbers
- * @argc: number of argument
+ * @argc: count argument
  * @argv: argument
- *
- * Return: o or 1
+ * Return: 0 or 1
  */
 
 int main(int argc, char *argv[])
 {
 	int x, y;
+
 	if (argc == 3)
 	{
 		x = atoi(argv[1]);
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", x * y);
 		return (0);
 	}
-
 	printf("Error\n");
+
 	return (1);
 }
