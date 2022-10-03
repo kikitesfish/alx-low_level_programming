@@ -47,7 +47,8 @@ int count_string(char *str)
 	return (b);
 }
 
-/** strtow - a function that splits a string into words
+/**
+ * strtow - a function that splits a string into words
  * @str: the string to be split
  *
  * Return: NULL or c
