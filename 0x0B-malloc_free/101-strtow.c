@@ -65,7 +65,7 @@ char **strtow(char *str)
 	if (b == 0)
 		return (NULL);
 
-	c = malloc(sizeof(char *) * (b + z));
+	c = malloc(sizeof(char *) * (b + 1));
 	if (c == NULL)
 		return (NULL);
 
