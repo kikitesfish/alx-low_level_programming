@@ -10,7 +10,7 @@
 
 int word_string(char *str)
 {
-	int i = 0; a = 0;
+	int i = 0, a = 0;
 
 	while (*(str + i) && *(str + i) != ' ')
 	{
