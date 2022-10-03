@@ -76,7 +76,7 @@ char **strtow(char *str)
 
 		y = word_string(str + i);
 
-		c[x] = malloc(sizeof(char) * (y + z));
+		c[x] = malloc(sizeof(char) * (y + 1));
 
 		if (c[x] == NULL)
 		{
