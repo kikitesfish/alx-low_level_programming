@@ -7,7 +7,7 @@
  * @s2: second string
  * @n: index
  *
- * Return : NULL or char pointer
+ * Return: NULL or char pointer
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -35,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		a[x++] = s1[i];
 
 	for (i = 0; s2[i] && i < n; i++)
-		a[x++] = s2 [i];
+		a[x++] = s2[i];
 
 	a[x] = '\0';
 
