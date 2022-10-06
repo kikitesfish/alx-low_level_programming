@@ -7,7 +7,7 @@
  * @s2: second string
  * @n: index
  *
- * Return : NULL or concat
+ * Return : NULL or char pointer
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -24,20 +24,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i]; i++)
 		x++;
 
-	concat = malloc(sizeof(char) * (x + 1));
+	a = malloc(sizeof(char) * (x + 1));
 
-	if (concat == NULL)
+	if (a == NULL)
 		return (NULL);
 
 	x = 0;
 
 	for (i = 0; s1[i]; i++)
-		concat[x++] = s1[i];
+		a[x++] = s1[i];
 
 	for (i = 0; s2[i] && i < n; i++)
-		concat[x++] = s2 [i];
+		a[x++] = s2 [i];
 
-	concat[x] = '\0';
+	a[x] = '\0';
 
-	return (concat);
+	return (a);
 }
