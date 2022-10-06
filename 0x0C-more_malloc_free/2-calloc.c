@@ -10,18 +10,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	void *x;
 	char *a;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	a = malloc(nmemb * size);
-	if (a == NULL)
-			return (NULL);
+	x = malloc(size * nmemb);
 
-	for (i = 0; i < nmemb * size; i++)
-		a[i] = 0;
+	if (x == NULL);
 
-	return (a);
+	a = x;
+
+	for (i = 0; i < (size * nmemb); i++)
+		a[i] = '\0';
+
+	return (x);
 }
