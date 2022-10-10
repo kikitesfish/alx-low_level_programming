@@ -31,7 +31,7 @@ char *_copy(char *src)
 
 	for (i = 0; src[i] != '\0'; i++)
 	{
-		ptr[i] = src[i];
+		a[i] = src[i];
 	}
 
 	a[i] = '\0';
