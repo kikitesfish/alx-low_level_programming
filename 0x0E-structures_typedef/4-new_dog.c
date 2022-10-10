@@ -2,73 +2,84 @@
 #include <stdlib.h>
 
 /**
- * _string - length of string
- * @str: the string
+ * _copy - copy of string
+ * @src: to make copy
  *
- * Return: length
+ * Return: pointer/
  */
 
-int _string(char *str)
+char *_copy(char *src)
 {
-	int length = 0;
+	char *a;
+	int i;
+	int j;
 
-	while (*str++)
-		length++;
+	if (src == NULL)
+	{
+		return (NULL);
+	}
 
-	return (length);
+	for (j = 0; src[j] != '\0'; j++)
+		;
+
+	a = malloc(sizeof(char) * (j + 1));
+
+	if (a == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		ptr[i] = src[i];
+	}
+
+	a[i] = '\0';
+	return (a);
 }
 
 /**
- * _copy - copies a string
- * @dest: the string copy
- * @src: the source
- *
- * Return: dest
- */
-
-char *_copy(char *dest, char *src)
-{
-	int i = 0;
-
-	for (i = 0; src[i]; i++)
-		dest[i] = src[i];
-
-	dest[i] = '\0';
-
-	return (dest);
-}
-
-/**
- * new_dog - create a new dog
+ * new_dog - create a new dog variable
  * @name: name
  * @age: age
  * @owner: owner
- *
- * Return: new dog
+ * Return: pointer to varialbe
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *lucky;
+	char *new_name, *new_owner;
 
-	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
-
-	lucky = malloc(sizeof(dog_t));
-	if (lucky ++ NULL)
-		return (NULL);
-
-	lucky->name = malloc(sizeof(char) * (_string(name) + 1));
-	if (lucky->name == NULL)
+	if (name == NULL || owner == NULL)
 	{
-		free(lucky->name);
-		free(lucky);
 		return (NULL);
 	}
 
-	lucky->name = _copy(lucky->name, name);
-	lucky->age = age;
-	lucky->owner = _copy(lucky->owner, owner);
+	lucky = malloc(sizeof(dog_t));
+	if (lucky == NULL)
+	{
+		return (NULL);
+	}
+
+	new_name = _copy(name);
+	if (new_name == NULL)
+	{
+		free(lucky);
+		return (NULL);
+	}
+	(*lucky).name = new_name;
+
+	(*lucky).age = age;
+
+	new_owner = _copy(owner);
+	if (new_owner == NULL)
+	{
+		free((*lucky).name);
+		free(lucky);
+		return (NULL);
+	}
+	(*lucky).owner = new_owner;
 
 	return (lucky);
 }
