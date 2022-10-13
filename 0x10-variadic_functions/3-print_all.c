@@ -28,7 +28,7 @@ void print_all(const char * const format, ...)
 		}
 		switch (format[i])
 		{
-			case 'y':
+			case 'c':
 				printf("%c", va_arg(num, int)), y = 1;
 				break;
 			case 'i':
