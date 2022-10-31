@@ -27,11 +27,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (y == -1)
 		return (0);
 	z = write(STDOUT_FILENO, total, y);
-	if (y == -1)
+	if (z == -1)
 		return (0);
 
-	free(total);
 	close(file);
+	free(total)
 
 	return (z);
 }
